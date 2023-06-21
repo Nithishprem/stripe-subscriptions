@@ -1,17 +1,24 @@
 # stripe-subscriptions
+
 client and server implementation for stripe subscriptions
+ 
+## React for client implemenation
 
-##React for client implemenation
+  
+```
+cd client
 
-```cd client
 npm install
-npm run dev```
 
-##Nodejs for server implementation
+npm run dev
+```
 
-```cd server
+## Nodejs for server implementation
+
+```
+cd server
+
 npm install
-npm start```
 
-
-
+npm start
+```
