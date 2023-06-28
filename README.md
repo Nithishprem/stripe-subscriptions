@@ -2,7 +2,7 @@
 
 client and server implementation for stripe subscriptions
  
-## React for client implemenation
+## React for client implementation
 
   
 ```
@@ -21,4 +21,13 @@ cd server
 npm install
 
 npm start
+```
+
+
+## rename .env.example to .env
+
+```
+and add 
+STRIPE_PUBLISHABLE_KEY
+STRIPE_SECRET_KEY
 ```
