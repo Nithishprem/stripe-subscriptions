@@ -59,6 +59,18 @@ function Plans() {
     }
   };
 
+  const handleScheduleSubscriptionUpdate = async (id) => {
+    try {
+      const res = await axios.post(API_DOMAIN + "/schedule-subscription-update", {
+        priceId: id,
+        subscriptionId: existingSubscription?.id,
+      });
+      console.log("update res", res?.data?.subscription);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
     getPlans();
     getexistingSubscription();
@@ -80,7 +92,8 @@ function Plans() {
               <button
                 onClick={() => {
                   if (existingSubscription?.id) {
-                    handleUpdate(price?.id);
+                    // handleUpdate(price?.id);
+                    handleScheduleSubscriptionUpdate(price?.id);
                   } else {
                     handleSubscribe(price?.id);
                   }
